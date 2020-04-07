@@ -1,0 +1,14 @@
+[
+    {
+        "@context": "http://schema.org/",
+        "@id": "https://fast.wistia.net/embed/iframe/o8o7i19vao",
+        "@type": "VideoObject",
+        "duration": "PT2M16S",
+        "name": "New Video SEO Embed Codes - JSON-LD",
+        "thumbnailUrl": "https://embed-ssl.wistia.com/deliveries/e4ec65e966b6d83e6370c0303d6d58483e70869a.jpg?image_crop_resized=960x540",
+        "embedUrl": "https://fast.wistia.net/embed/iframe/o8o7i19vao",
+        "uploadDate": "2015-11-09",
+        "transcript": "We made an update\nto Wistia Embeds\n\nthat will make video",
+        "description": "a Wistia Product Launch Videos video"
+    }
+]

@@ -27,6 +27,7 @@ def html_page_handle_and_download(file_name, name):
 		if video_url == '{"error":true,"iframe":true}':
 			sprint("\033[1;31;40mYour video id is not valid\033[0;37;40m", 2)
 		else:
+#			print(video_url)
 			new_video_url = video_url.split("url")[1].split(',')[0].split('"')[2]
 			os.system("curl -O {}".format(new_video_url))
 			video_name = video_url.split("url")[1].split(',')[0].split('"')[2].split("/")[4]
@@ -61,7 +62,7 @@ def download_folder():
 def main():
 	os.system("clear")
 	download_folder()
-	url = "http://fast.wistia.net/embed/iframe/"
+	url = "https://fast.wistia.net/embed/iframe/"
 	i = 0
 	with open(filename, "r+") as video_id:
 		if os.stat(filename).st_size == 0:
@@ -74,8 +75,8 @@ def main():
 			if 'disabled' in record:
 				continue 
 			id = record['embedUrl'].rsplit('/', 1)[-1]
-			name = record['name'].split('IEC',1)[1]
-			print('id:' + id + ', name: ' + name)
+			name = record['name'] # .split('IEC',1)[1]
+#			print('id:' + id + ', name: ' + name)
 
 			os.system("curl -O {}".format(url + id))
 			print("Video ID " + str(i + 1) + ' ' + name + " -------------------------------------------------")
